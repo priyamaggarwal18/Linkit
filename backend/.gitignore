@@ -1,0 +1,7 @@
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/models 
+/node_modules
+/routes
