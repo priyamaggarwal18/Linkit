@@ -1,81 +1,30 @@
-const express = require('express');
-const authenticateToken = require('../middlewares/authMiddleware');
-const User = require('../models/User');
-const Links = require('../models/Links');
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import userRoutes from './routes/userRoutes.js';
+import linkRoutes from './routes/linkRoutes.js';
 
-const router = express.Router();
+dotenv.config();
 
-// ** Routes **
+const app = express();
+const port = process.env.PORT;
 
-// 1. Save Profile Image Link
-router.post('/profile-image', authenticateToken, async (req, res) => {
-  try {
-    const { profileImage } = req.body;
+// Middleware
+app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+app.use(express.json());
 
-    if (!profileImage) {
-      return res.status(400).json({ error: 'Profile image link is required' });
-    }
+// Connect to MongoDB
+mongoose
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('Error connecting to MongoDB:', err));
 
-    const user = await User.findByIdAndUpdate(
-      req.user.userId,
-      { profileImage },
-      { new: true }
-    );
+// Routes
+app.use('/api/users', userRoutes);
+app.use('/api/links', linkRoutes);
 
-    if (!user) {
-      return res.status(404).json({ error: 'User not found' });
-    }
-
-    res.status(200).json({
-      message: 'Profile image link saved successfully',
-      profileImage: user.profileImage,
-    });
-  } catch (err) {
-    console.error('Error saving profile image link:', err);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+// Start Server
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
-
-// 2. Get User Details for Dashboard
-router.get('/user', authenticateToken, async (req, res) => {
-  try {
-    const user = await User.findById(req.user.userId);
-    if (!user) return res.status(404).json({ message: 'User not found' });
-
-    res.status(200).json({
-      username: user.username,
-      email: user.email,
-      profileImage: user.profileImage,
-      profileClicks: user.profileClicks,
-    });
-  } catch (err) {
-    console.error('Error fetching user data:', err);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-// 3. Get Public Profile by Username
-router.get('/profile/:username', async (req, res) => {
-  try {
-    const user = await User.findOneAndUpdate(
-      { username: req.params.username },
-      { $inc: { profileClicks: 1 } },
-      { new: true }
-    );
-    if (!user) return res.status(404).json({ message: 'User not found' });
-
-    const links = await Links.find({ userId: user._id });
-
-    res.status(200).json({
-      username: user.username,
-      profileImage: user.profileImage,
-      profileClicks: user.profileClicks,
-      links,
-    });
-  } catch (err) {
-    console.error('Error fetching public profile:', err);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-module.exports = router;

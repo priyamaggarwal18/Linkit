@@ -1,5 +1,5 @@
 export const companyLinks = [
-    { text: "The Linktree Blog", href: "#" },
+    { text: "The Linkit Blog", href: "#" },
     { text: "Engineering Blog", href: "#" },
     { text: "Marketplace", href: "#" },
     { text: "What's New", href: "#" },
@@ -11,8 +11,8 @@ export const companyLinks = [
   ];
   
   export const communityLinks = [
-    { text: "Linktree Creator Services Program", href: "#" },
-    { text: "Linktree for Enterprise", href: "#" },
+    { text: "Linkit Creator Services Program", href: "#" },
+    { text: "Linkit for Enterprise", href: "#" },
     { text: "2022 Creator Report", href: "#" },
     { text: "Charities", href: "#" },
     { text: "Creator Profile Directory", href: "#" },
@@ -22,7 +22,7 @@ export const companyLinks = [
   export const supportLinks = [
     { text: "Help Topics", href: "#" },
     { text: "Getting Started", href: "#" },
-    { text: "Linktree Pro", href: "#" },
+    { text: "Linkit Pro", href: "#" },
     { text: "Features & How-Tos", href: "#" },
     { text: "FAQs", href: "#" },
     { text: "Report a Violation", href: "#" }
