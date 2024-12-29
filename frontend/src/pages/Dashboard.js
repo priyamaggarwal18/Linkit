@@ -42,8 +42,8 @@ const Dashboard = () => {
 
   const handlePublicProfile = () => {
     if (user && user.username) {
-      const publicProfileUrl = `linkit-97du.vercel.app/profile/${user.username}`;
-      window.location.href = publicProfileUrl;
+      const publicProfileUrl = `/profile/${user.username}`;
+      navigate(publicProfileUrl); 
     } else {
       console.error("User or username is undefined.");
     }
