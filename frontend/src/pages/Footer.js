@@ -7,8 +7,13 @@ import {
   legalLinks,
   socialImages
 } from "../constants/FooterData";
+import { useNavigate } from "react-router-dom";
 
 export function Footer({ isDarkMode }) {
+  const navigate = useNavigate();
+  const handleNavigation = (link) => {
+    navigate(link);
+  };
   return (
     <footer className={`flex flex-col px-16 pt-16 pb-16 mt-10 rounded-2xl ${isDarkMode ? "bg-black text-white" : "bg-white text-black"} max-md:px-5 max-md:max-w-full`}>
     <div className="flex flex-wrap gap-4 items-start font-black max-md:max-w-full">
@@ -21,11 +26,13 @@ export function Footer({ isDarkMode }) {
       <div className="flex flex-wrap gap-10 items-start mt-12 max-md:mt-10 max-md:max-w-full mx-auto">
         <div className="flex gap-2 items-start font-black tracking-normal min-w-[240px]">
           <button 
+          onClick={() => handleNavigation("/login")}
             className={`${!isDarkMode?"bg-zinc-100 hover:bg-zinc-200 focus:ring-zinc-500":"text-white bg-custom-grey-color "} px-7 pt-5 pb-5 text-base leading-relaxed rounded-lg  max-md:px-5  focus:outline-none focus:ring-2 focus:ring-offset-2 `}
           >
             Log in
           </button>
           <button 
+          onClick={() => handleNavigation("/register")}
             className="pt-5 pr-8 pb-5 pl-7 text-sm leading-6 bg-custom-green rounded-[32px] max-md:px-5 hover:bg-lime-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500"
           >
             Get started for free
