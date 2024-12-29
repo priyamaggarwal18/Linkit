@@ -3,8 +3,8 @@
 </div>
 <div align="center">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/priyamaggarwal18/Linkit?style=for-the-badge&color=darkgreen">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/priyamaggarwal18/Linkit?style=for-the-badge&color=darkgreen">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/priyamaggarwal18/Linkit?style=for-the-badge&color=darkgreen">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/priyamaggarwal18/Linkit?style=for-the-badge&color=darkgreen" />
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/priyamaggarwal18/Linkit?style=for-the-badge&color=darkgreen" />
     <img alt="Last commit" src="https://img.shields.io/github/last-commit/priyamaggarwal18/Linkit?style=for-the-badge&color=darkgreen">
 </div>
 
