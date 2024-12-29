@@ -159,7 +159,7 @@ const LandingPage = () => {
       </header>
 
       {/* Main Content */}
-      <main className="mt-20 px-4">
+      <main className="px-4">
         <HeroComponent isDarkMode={isDarkMode} />
         <ImageSection isDarkMode={isDarkMode} />
         <FeatureSection isDarkMode={isDarkMode} />
