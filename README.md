@@ -38,7 +38,7 @@ You can access the deployed application here: [Linkit Deployed App](https://link
 - [Key Features](#key-features)
 - [Project Structure](#project-structure)
 - [Environment Variables](#environment-variables)
-- [How To Use this Project](#how-to-use-this-rroject)
+- [How To Use This Project](#how-to-use-this-rroject)
 - [Check Responsive](#check-responsive)
 - [Storage Schema](#storage-schema)
 - [Concepts Used](#concepts-used)
