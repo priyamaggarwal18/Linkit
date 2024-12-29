@@ -13,3 +13,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(39, 39, 39, 0.4);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+::selection {
+  background-color: #4caf50; 
+  color: white;
+}
+
+::-webkit-selection {
+  background-color: #4caf50; 
+  color: white; 
+}
+
