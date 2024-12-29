@@ -4,13 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-/src/pages/Login.js
-/src/pages/ProfileCard.js
-/src/pages/PublicLinks.js
-/src/pages/Ranking.js
-/src/pages/Signup.js
-/src/pages/PublicProfile.js
-/src/pages/SocialLink.js
 
 
 # testing
