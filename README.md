@@ -224,7 +224,7 @@ Linkit is designed to ensure a seamless experience across all devices. Click the
     <img 
       src="./frontend/src/utils/images/check_responsive.png" 
       alt="Responsive design demonstration" 
-      style="width: auto; height: 500px;" 
+      style="width: auto; " 
     />
   </a>
 </div>
