@@ -57,7 +57,7 @@ const PublicProfile = () => {
         <LinkItLogo isDarkMode={isDarkMode} />
         <div className="flex gap-4 items-center">
           {darkButton({ isDarkMode, toggleDarkMode })}
-          <CopyButton link={`localhost:3000/profile/${username}`} />
+          <CopyButton link={`linkit-97du.vercel.app/profile/${username}`} />
         </div>
       </header>
 
