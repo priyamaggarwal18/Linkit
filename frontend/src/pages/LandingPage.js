@@ -4,6 +4,7 @@ import { darkButton } from "../components/darkButton";
 import { useNavigate } from "react-router-dom";
 import LinkItLogo from "../components/linkitLogo";
 import { Footer } from "./Footer";
+import { Analytics } from "@vercel/analytics/react"
 import HeroComponent from "../components/hero";
 import FeatureSection from "../components/features";
 import ImageSection from "../components/imagesection";
@@ -50,6 +51,7 @@ const LandingPage = () => {
         isDarkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
+      <Analytics/>
       {/* Navbar */}
       <header
         className={`fixed py-3 top-0 left-0 right-0 z-50 w-full ${

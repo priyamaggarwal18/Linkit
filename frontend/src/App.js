@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage"; // Your existing landing page
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { Analytics } from "@vercel/analytics/react"
 import Dashboard from "./pages/Dashboard";
 import PublicProfile from "./pages/PublicProfile";
 import Rankings from "./pages/Rankings";
@@ -12,7 +11,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Analytics/>
+        
         <Routes>
           {/* Landing Page */}
           <Route path="/" element={<LandingPage />} />
