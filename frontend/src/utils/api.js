@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://linkit-two.vercel.app/api", // Backend URL
+  baseURL: "https://linkit-two.vercel.app/api",
 });
 
 
