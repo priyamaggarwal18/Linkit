@@ -48,7 +48,7 @@ const LandingPage = () => {
   return (
     <div
       className={`min-h-screen overflow-x-hidden ${
-        isDarkMode ? "bg-black text-white" : "bg-green-100 text-black"
+        isDarkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
       <Analytics/>
