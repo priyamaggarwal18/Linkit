@@ -120,7 +120,6 @@ const Dashboard = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Particles Background */}
       <ParticlesComponent isDarkMode={isDarkMode} />
 
       {/* Main Content */}
@@ -129,8 +128,7 @@ const Dashboard = () => {
           isDarkMode ?  "text-white" : " text-black"
         }`}
       >
-        {/* Header Section */}
-        <div className="w-full flex flex-col sm:flex-row sm:justify-between items-center px-4 sm:px-10 py-4">
+        <div className=" sticky w-full flex flex-col sm:flex-row sm:justify-between items-center px-4 sm:px-10 py-4">
           <LinkItLogo isDarkMode={isDarkMode} />
           <div className="flex flex-wrap items-center gap-4">
             {darkButton({ isDarkMode, toggleDarkMode })}
